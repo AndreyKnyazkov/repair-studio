@@ -1,0 +1,30 @@
+* 
+  box-sizing: border-box
+img
+  max-width: 100%  
+a
+  text-decoration: none
+body
+  +roboto-reg
+.container
+  width: 1140px
+  margin: auto
+@media (max-width: 1200px)
+  .container
+    width: 760px
+@media (max-width: 768px)
+  .container
+    max-width: 580px
+    width: 95%
+@media (max-width: 480px)
+  .container
+    width: 750px
+    width: 95%
+.button
+  padding: 20px 50px
+  display: inline-block
+  font-size: 16px
+  +roboto-900
+  border-radius: 5px
+  background: #FFCC69
+  cursor: pointer

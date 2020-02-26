@@ -1,0 +1,44 @@
+.navbar
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 65px 
+  &-logo
+    display: flex
+    align-items: center
+    &__title
+      margin-left: 10px
+      font-size: 18px;
+  &-menu
+    display: flex
+    &__item
+      font-size: 16px
+      color: $text-color
+      display: inline-block
+      position: relative
+      &:not(:last-child)      
+        margin-right: 31px
+      &:hover
+        &:after
+          content: ''
+          z-index: -1
+          display: block
+          width: 100%
+          position: absolute
+          bottom: 1px
+          height: 2px
+          background: #F0BC5E
+          transition: 0.2s      
+  &-contacts
+    &__tel
+      font-size: 18px
+      color: $text-color
+@media (max-width: 768px)
+  .navbar
+    &-block
+      margin-top: 35px
+    &-menu
+      display: none
+            
+        

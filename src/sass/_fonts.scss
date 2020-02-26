@@ -1,0 +1,16 @@
+@mixin roboto-reg {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+@mixin roboto-bold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold
+}
+@mixin roboto-900 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900
+}
+@mixin playfair {
+  font-family: Playfair Display, sans-serif;
+  font-weight: 900;
+}
