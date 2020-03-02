@@ -380,7 +380,7 @@ body {
 @media (max-width: 480px) {
   .container {
     width: 750px;
-    width: 95%;
+    width: 85%;
   }
 }
 
@@ -555,6 +555,45 @@ button {
   .hero {
     background: url(../img/hero/hero-image.png) no-repeat 85%;
     background-size: contain;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    background: url(../img/hero/hero-image.png) no-repeat 550px;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background: url(../img/hero/hero-image.png) no-repeat 400px;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    background: url(../img/hero/hero-mobile-image.png) no-repeat 193px 136px;
+    background-size: 72%;
+    margin-top: 31px;
+  }
+  .hero-text__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .hero-text__subtitle {
+    font-size: 14px;
+  }
+  .hero-list {
+    margin-top: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero-list__item {
+    width: 170px;
   }
 }
 /*# sourceMappingURL=style.css.map */
