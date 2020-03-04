@@ -375,6 +375,10 @@ body {
   cursor: pointer;
 }
 
+.button:hover {
+  background-color: #ffbb36;
+}
+
 .header-title {
   font-size: 24px;
   line-height: 32px;
@@ -540,10 +544,6 @@ button {
   margin-top: 50px;
 }
 
-.hero-list__button:hover {
-  background-color: #ffbb36;
-}
-
 .hero-list__item {
   width: 48%;
   margin-top: 25px;
@@ -573,6 +573,9 @@ button {
 }
 
 @media (max-width: 768px) {
+  .hero-block {
+    padding-bottom: 0;
+  }
   .hero-background {
     background: url(../img/hero/hero-mobile-image.png) no-repeat 240px 45px;
     background-size: 500px;
@@ -681,6 +684,9 @@ button {
 }
 
 @media (max-width: 768px) {
+  .offer-feature__title {
+    margin-top: 92px;
+  }
   .offer-block__button {
     font-size: 14px;
     padding: 20px 44px;

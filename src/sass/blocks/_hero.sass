@@ -27,8 +27,6 @@
     flex-wrap: wrap
     &__button
       margin-top: 50px
-      &:hover
-        background-color: darken($main-color, 10%)
     &__item
       width: 48%
       margin-top: 25px
@@ -47,6 +45,8 @@
     background-size: contain
 @media (max-width: 768px)
   .hero
+    &-block
+      padding-bottom: 0
     &-background
       background: url(../img/hero/hero-mobile-image.png) no-repeat 240px 45px
       background-size: 500px
