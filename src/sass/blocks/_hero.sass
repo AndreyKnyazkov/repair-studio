@@ -1,7 +1,8 @@
 .hero
-  background: url(../img/hero/hero-image.png) no-repeat 75%
-  background-size: contain
-  margin-top: 70px
+  &-background
+    background: url(../img/hero/hero-image.png) no-repeat 75%
+    background-size: contain
+    margin-top: 70px
   &-block
     padding-top: 30px
     padding-bottom: 223px
@@ -37,22 +38,18 @@
       min-width: 40px
       margin-right: 3px
 @media (max-width: 1450px)
-  .hero
+  .hero-background
     background: url(../img/hero/hero-image.png) no-repeat 85%
     background-size: contain
 @media (max-width: 1200px)
-  .hero
+  .hero-background
     background: url(../img/hero/hero-image.png) no-repeat 550px
     background-size: contain
 @media (max-width: 768px)
   .hero
-    background: url(../img/hero/hero-image.png) no-repeat 400px
-    background-size: contain
-@media (max-width: 480px)
-  .hero
-    background: url(../img/hero/hero-mobile-image.png) no-repeat 193px 136px
-    background-size: 72%
-    margin-top: 31px
+    &-background
+      background: url(../img/hero/hero-mobile-image.png) no-repeat 240px 45px
+      background-size: 500px
     &-text
       &__title
         font-size: 18px
@@ -64,3 +61,9 @@
       flex-direction: column
       &__item
         width: 170px
+@media (max-width: 468px)
+  .hero
+    &-background
+      background: url(../img/hero/hero-mobile-image.png) no-repeat 193px 136px
+      background-size: 72%
+      margin-top: 31px
