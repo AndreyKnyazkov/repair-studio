@@ -367,6 +367,7 @@ body {
 .button {
   padding: 20px 50px;
   display: inline-block;
+  text-align: center;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
