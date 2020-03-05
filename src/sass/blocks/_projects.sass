@@ -1,0 +1,71 @@
+.projects
+  &_bg
+    background: rgba(114, 117, 142, 0.05)
+  &-done
+    &__subtitle
+      max-width: 520px
+.slider
+  margin-top: 62px
+  user-select: auto
+  &:active
+    outline: none
+  &__item
+    display: flex!important
+  &__image
+    flex-basis: 59.4%
+    img
+      border-radius: 10px
+  &__feedback
+    padding: 42px 39px 38px 39px
+    flex-basis: 40%
+    background: #FFFFFF
+    border-radius: 10px
+    &s
+      &-title
+        margin-top: 38px
+        font-weight: bold
+        font-size: 16px
+        color: $text-color-gray
+      &-subtitle
+        margin-top: 14px
+        font-size: 15px
+        line-height: 160%
+        color: $text-color-gray
+  &__title
+    margin-bottom: 9px
+    font-size: 18px
+    line-height: 140%
+  &__features
+    margin-top: 16px
+    font-size: 16px
+    color: $text-color-gray
+    &_yellow
+      font-weight: bold
+      color: $slider-color
+@media (max-width: 1200px)
+  .slider
+    &__item
+      flex-direction: column
+    &__image
+      img
+        min-width: 100%
+    &__feedback
+      margin-top: 22px
+@media (max-width: 768px)
+  .slider
+    margin-top: 47px
+    &__title
+      font-size: 16px
+    &__features
+      font-size: 14px
+    &__image
+      img
+        max-width: 100%
+    &__feedback
+      padding: 30px 28px 38px 28px
+      &s
+        &-title
+          font-size: 14px
+          margin-top: 28px
+        &-subtitle
+          font-size: 12px
