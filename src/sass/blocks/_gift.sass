@@ -1,0 +1,41 @@
+.gift
+  &-block
+    padding-top: 81px
+    flex-basis: 44%
+    &s
+      display: flex
+    &__title
+      font-size: 36px
+      line-height: 48px
+    &__subtitle
+      max-width: 450px
+      margin-top: 23px
+      line-height: 150%
+    &__button
+      margin-top: 37px
+      padding: 19px 67px
+  &-image
+    flex-basis: 60%
+@media (max-width: 1200px)
+  .gift
+    &-block
+      padding-top: 0
+      &__title
+        font-size: 24px
+        line-height: 32px
+@media (max-width: 768px)
+  .gift
+    &-block
+      &s
+        flex-direction: column
+      &__subtitle
+        max-width: 100%
+      &__button
+        font-size: 16px
+    &-image
+      margin-top: 40px
+@media (max-width: 768px)
+  .gift
+    &-block
+      &__button
+        width: 100%
