@@ -977,4 +977,105 @@ button {
     font-size: 12px;
   }
 }
+
+.profit-block {
+  padding-bottom: 50px;
+}
+
+.profit-block__subtitle {
+  max-width: 520px;
+}
+
+.profit-features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profit-features__icon {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 34%;
+      flex-basis: 34%;
+}
+
+.profit-features__icons img {
+  max-width: initial;
+  width: 70px;
+  height: 80px;
+}
+
+.profit-features__title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.profit-features__description {
+  margin-right: 20px;
+  max-width: 262px;
+}
+
+.profit-features__subtitle {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 140%;
+  color: #666666;
+}
+
+@media (max-width: 1200px) {
+  .profit-features__icon {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profit-features__description {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .profit-features__subtitle {
+    margin-top: 7px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profit-block {
+    padding-bottom: 0px;
+  }
+  .profit-features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profit-features__title {
+    font-size: 14px;
+  }
+  .profit-features__icon {
+    margin-top: 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .profit-features__description {
+    margin-top: 0;
+    margin-left: 28px;
+    margin-right: 0;
+    max-width: 100%;
+    font-size: 12px;
+    text-align: left;
+  }
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,60 @@
+.profit
+  &-block
+    padding-bottom: 50px
+    &__subtitle
+      max-width: 520px
+  &-features
+    display: flex
+    &__icon
+      margin-top: 35px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-basis: 34%
+      &s
+        img
+          max-width: initial
+          width: 70px
+          height: 80px
+    &__title
+      font-size: 16px
+      font-weight: bold
+    &__description
+      margin-right: 20px
+      max-width: 262px
+    &__subtitle
+      margin-top: 5px
+      font-size: 14px
+      line-height: 140%
+      color: $text-color-gray
+@media (max-width: 1200px)
+  .profit
+    &-features
+      &__icon
+        flex-direction: column
+      &__description
+        margin-top: 10px
+        text-align: center
+      &__subtitle
+        margin-top: 7px
+@media (max-width: 768px)
+  .profit
+    &-block
+      padding-bottom: 0px
+    &-features
+      flex-direction: column
+      &__title
+        font-size: 14px
+      &__icon
+        margin-top: 30px
+        flex-direction: row
+        justify-content: start
+      &__description
+        margin-top: 0
+        margin-left: 28px
+        margin-right: 0         
+        max-width: 100%
+        font-size: 12px
+        text-align: left
+            
+      
