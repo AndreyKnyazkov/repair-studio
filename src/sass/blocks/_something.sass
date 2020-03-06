@@ -1,0 +1,42 @@
+.something
+  margin-top: 20px
+  &-block
+    display: flex
+    align-items: center
+  &-image
+    flex-basis: 51%
+    img
+      min-width: 107%
+  &-ask
+    flex-basis: 50%
+    &__title
+    &__subtitle
+      margin-top: 21px
+    &__button
+      margin-top: 40px
+      background: transparent
+      border: 2px solid $main-color
+      padding: 19px 80px
+      &:hover
+        background: $main-color
+@media (max-width: 768px)
+  .something
+    margin-top: 10px
+    &-block
+      flex-direction: column
+    &-image
+      flex-basis: 100%
+      img
+        min-width: 100%
+    &-ask
+      flex-basis: 100%
+      &__button
+        font-size: 16px
+@media (max-width: 480px)
+  .something
+    &-image
+      img
+    &-ask
+      &__button
+        width: 100%
+      
