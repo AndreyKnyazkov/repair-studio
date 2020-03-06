@@ -1,0 +1,51 @@
+.questions
+  &-block
+    &__title
+    &__subtitle
+      max-width: 520px
+  &-answer
+    margin-top: 15px
+    width: 100%
+    &__title
+      width: 100%
+      padding: 0 25px 0 25px
+      height: 60px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border-radius: 10px
+      box-shadow: 0px 4px 44px rgba(184, 184, 184, 0.25)
+      font-size: 16px
+      cursor: pointer
+      &::after
+        content: url('../img/questions/arrow-bottom.svg')
+    &_open
+    &_close      
+    &__subtitle
+      margin: 25px 30px 0px 24px
+      color: $answer-color
+.open .questions-answer__subtitle
+  width: 100%
+  display: block
+  -webkit-transform: scaleY(1)
+  -o-transform: scaleY(1)
+  -ms-transform: scaleY(1)
+  transform: scaleY(1)
+  -webkit-transform-origin: top
+  -o-transform-origin: top
+  -ms-transform-origin: top
+  transform-origin: top
+  -webkit-transition: -webkit-transform 0.4s ease-out
+  -o-transition: -o-transform 0.4s ease
+  -ms-transition: -ms-transform 0.4s ease
+  transition: transform 0.4s ease
+  box-sizing: border-box
+.close .questions-answer__subtitle
+  height: 0px
+  transition:height 1s ease-out
+  -webkit-transform: scaleY(0)
+  -o-transform: scaleY(0)
+  -ms-transform: scaleY(0)
+  transform: scaleY(0)
+  float:left
+  display:block
