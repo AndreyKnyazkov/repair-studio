@@ -601,13 +601,13 @@ body {
 @media (max-width: 1200px) {
   .container {
     width: 760px;
+    width: 95%;
   }
 }
 
 @media (max-width: 768px) {
   .container {
     max-width: 580px;
-    width: 95%;
   }
   .header-description {
     margin-top: 15px;
@@ -1202,19 +1202,24 @@ button {
   }
 }
 
+.question_bg {
+  background: url(../img/questions/question-image.png) right 100px no-repeat;
+  background-size: 47%;
+}
+
 .questions-block__subtitle {
   max-width: 520px;
+  margin-bottom: 62px;
 }
 
 .questions-answer {
   margin-top: 15px;
-  width: 100%;
+  max-width: 645px;
 }
 
 .questions-answer__title {
   width: 100%;
-  padding: 0 25px 0 25px;
-  height: 60px;
+  padding: 19px 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1231,23 +1236,28 @@ button {
   cursor: pointer;
 }
 
-.questions-answer__title::after {
-  content: url("../img/questions/arrow-bottom.svg");
-}
-
 .questions-answer__subtitle {
-  margin: 25px 30px 0px 24px;
+  line-height: 160%;
+  margin: 0px 30px 0px 22px;
   color: #72758E;
 }
 
+.questions-answer.open .questions-answer__title::after {
+  content: url("../img/questions/arrow-bottom.svg");
+}
+
+.questions-answer.close .questions-answer__title::after {
+  content: url("../img/questions/arrow-top.svg");
+}
+
 .open .questions-answer__subtitle {
-  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 35px;
   display: block;
   -webkit-transform: scaleY(1);
-  transform: scaleY(1);
+          transform: scaleY(1);
   -webkit-transform-origin: top;
-  transform-origin: top;
-  -webkit-transition: -webkit-transform 0.4s ease-out;
+          transform-origin: top;
   -webkit-transition: -webkit-transform 0.4s ease;
   transition: -webkit-transform 0.4s ease;
   transition: transform 0.4s ease;
@@ -1258,7 +1268,41 @@ button {
 
 .close .questions-answer__subtitle {
   height: 0px;
+  -webkit-transition: height 1s ease-out;
+  transition: height 1s ease-out;
   -webkit-transform: scaleY(0);
-  transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+@media (max-width: 1500px) {
+  .question_bg {
+    background: url(../img/questions/question-image.png) right 200px no-repeat;
+    background-size: 47%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .question_bg {
+    background: initial;
+  }
+  .questions-answer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .questions-answer__title {
+    font-size: 14px;
+  }
+  .questions-answer__subtitle {
+    font-size: 12px;
+  }
+  .questions-block__subtitle {
+    margin-bottom: 30px;
+  }
+  .open .questions-answer__subtitle {
+    margin-top: 12px;
+    margin-bottom: 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

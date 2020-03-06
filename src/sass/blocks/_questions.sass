@@ -1,51 +1,74 @@
-.questions
-  &-block
-    &__title
-    &__subtitle
-      max-width: 520px
-  &-answer
-    margin-top: 15px
-    width: 100%
-    &__title
-      width: 100%
-      padding: 0 25px 0 25px
-      height: 60px
-      display: flex
-      align-items: center
-      justify-content: space-between
-      border-radius: 10px
-      box-shadow: 0px 4px 44px rgba(184, 184, 184, 0.25)
-      font-size: 16px
-      cursor: pointer
-      &::after
-        content: url('../img/questions/arrow-bottom.svg')
-    &_open
-    &_close      
-    &__subtitle
-      margin: 25px 30px 0px 24px
-      color: $answer-color
+.question
+  &_bg
+    background: url(../img/questions/question-image.png) right 100px no-repeat
+    background-size: 47%
+  &s
+    &-block
+      &__title
+      &__subtitle
+        max-width: 520px
+        margin-bottom: 62px
+    &-answer
+      margin-top: 15px
+      max-width: 645px
+      &__title
+        width: 100%
+        padding: 19px 25px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-radius: 10px
+        box-shadow: 0px 4px 44px rgba(184, 184, 184, 0.25)
+        font-size: 16px
+        cursor: pointer
+      &_open
+      &_close      
+      &__subtitle
+        line-height: 160%
+        margin: 0px 30px 0px 22px
+        color: $answer-color
+.questions-answer.open .questions-answer__title
+  &::after
+    content: url('../img/questions/arrow-bottom.svg')
+.questions-answer.close .questions-answer__title
+  &::after
+    content: url('../img/questions/arrow-top.svg')
 .open .questions-answer__subtitle
-  width: 100%
+  margin-top: 25px
+  margin-bottom: 35px
   display: block
-  -webkit-transform: scaleY(1)
-  -o-transform: scaleY(1)
-  -ms-transform: scaleY(1)
   transform: scaleY(1)
-  -webkit-transform-origin: top
-  -o-transform-origin: top
-  -ms-transform-origin: top
   transform-origin: top
-  -webkit-transition: -webkit-transform 0.4s ease-out
-  -o-transition: -o-transform 0.4s ease
-  -ms-transition: -ms-transform 0.4s ease
   transition: transform 0.4s ease
   box-sizing: border-box
 .close .questions-answer__subtitle
   height: 0px
-  transition:height 1s ease-out
-  -webkit-transform: scaleY(0)
-  -o-transform: scaleY(0)
-  -ms-transform: scaleY(0)
+  transition: height 1s ease-out
   transform: scaleY(0)
-  float:left
-  display:block
+@media (max-width: 1500px)
+  .question
+    &_bg
+      background: url(../img/questions/question-image.png) right 200px no-repeat
+      background-size: 47%
+@media (max-width: 1200px)
+  .question
+    &_bg
+      background: initial
+    &s
+      &-answer
+        max-width: 100%
+      &-block
+@media (max-width: 768px)
+  .question
+    &s
+      &-answer
+        &__title
+          font-size: 14px
+        &__subtitle
+          font-size: 12px
+      &-block
+        &__subtitle
+          margin-bottom: 30px
+  .open .questions-answer__subtitle
+    margin-top: 12px
+    margin-bottom: 30px
