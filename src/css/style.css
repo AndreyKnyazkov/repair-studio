@@ -1490,7 +1490,7 @@ button {
     margin-top: 16px;
     font-size: 16px;
   }
-  yamaps {
+  ymaps:first-child {
     max-height: 300px;
   }
 }
