@@ -1390,6 +1390,7 @@ button {
 }
 
 .adress-contacts {
+  z-index: 1;
   padding: 48px 67px 56px 67px;
   position: absolute;
   width: 460px;
@@ -1452,12 +1453,23 @@ button {
 
 @media (max-width: 768px) {
   .adress-contacts {
+    position: absolute;
+    margin: auto;
+    margin-bottom: 91px;
+    font-size: 14px;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .adress-contacts {
     padding: 45px 29px 50px 34px;
     width: 85%;
     margin: auto;
-    margin-bottom: 91px;
     position: initial;
     font-size: 14px;
+    margin-bottom: 82px;
   }
   .adress-contacts__title {
     font-size: 18px;
@@ -1475,9 +1487,11 @@ button {
     color: #fff;
   }
   .adress-contacts__button {
-    width: 100%;
     margin-top: 16px;
     font-size: 16px;
+  }
+  yamaps {
+    max-height: 300px;
   }
 }
 /*# sourceMappingURL=style.css.map */

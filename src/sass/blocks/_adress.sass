@@ -3,6 +3,7 @@
   &-map
     clip-path: inset(0 round calc(20% - -410px) calc(20% - -410px) 0 0)
   &-contacts
+    z-index: 1
     padding: 48px 67px 56px 67px
     position: absolute
     width: 460px
@@ -44,12 +45,21 @@
 @media (max-width: 768px)
   .adress
     &-contacts
+      position: absolute
+      margin: auto  
+      margin-bottom: 91px
+      font-size: 14px
+      left: 0
+      right: 0
+@media (max-width: 480px)
+  .adress
+    &-contacts
       padding: 45px 29px 50px 34px
       width: 85%
-      margin: auto
-      margin-bottom: 91px
+      margin: auto      
       position: initial
       font-size: 14px
+      margin-bottom: 82px
       &__title
         font-size: 18px
       &__location
@@ -61,6 +71,7 @@
         a
           color: #fff
       &__button
-        width: 100%
         margin-top: 16px
         font-size: 16px
+  yamaps
+    max-height: 300px
