@@ -17,7 +17,7 @@ gulp.task('move-js', function(done) {
   done();
 });
 gulp.task('move-svg', function (done) {
-  return gulp.src('./src/img/*.svg')
+  return gulp.src('./src/img/**/*.svg')
     .pipe(gulp.dest('dist/img/'));
   done();
 });
@@ -36,7 +36,10 @@ gulp.task('fonts', function(done) {
 }); 
 
 gulp.task('tinyPNG', function (done) {
-  return gulp.src('./src/img/**/*.{png,jpg,jpeg,svg}')
+  return gulp.src('./src/img/**/*.{png,jpg,jpeg}', {
+    dot: true,
+    ignore: '/**/*.svg'
+  })
       .pipe(tinyPNG({
           key: '8CwslrdFH37Xwp9p0LrLrJTN3NnDL94b',
       }))
