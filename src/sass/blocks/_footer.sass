@@ -1,0 +1,48 @@
+.footer
+  background-color: #72758E
+  &-logo
+    display: flex
+    align-items: center
+    &__text
+      margin-left: 10px
+      margin-top: 2px
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: #fff
+  &__politics
+    display: block
+    z-index: 2
+    a:visited
+      color: #fff 
+    a:after
+      content: ''
+      z-index: 1
+      display: block
+      width: 100%
+      transform: translateY(-3px)
+      height: 1px
+      background: #FFF
+  transition: 0.2s  
+  &__telephone
+    font-size: 18px
+    a
+      color: #fff
+@media (max-width: 768px)
+  .footer
+    padding: 40px 0px 60px 0px
+    &-block
+      font-size: 14px
+@media (max-width: 480px)
+  .footer
+    padding: 40px 0px 60px 0px
+    &-block
+      flex-direction: column
+      justify-content: center
+    &-logo
+      margin-bottom: 45px
+    &__politics
+      margin-bottom: 45px
+      font-size: 14px
+    &__telephone
