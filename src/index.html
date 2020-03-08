@@ -60,7 +60,7 @@
               <div class="hero-list__text">Сделали ремонт в 300 объектах</div>
             </li>
           </ul>
-        <button class="button hero-list__button">Рассчитать стоимость</button> 
+        <button class="button hero-list__button" data-popup='рассчитать стоимость'>Рассчитать стоимость</button> 
       </div>
     </div>
   </div>
@@ -87,7 +87,7 @@
             установка сантехники<br>
             покраска потолков <br>
             покраска труб, радиаторов </div>
-          <div class="offer-block__button button">Рассчитать стоимость</div>
+          <button class="offer-block__button button" data-popup='рассчитать стоимость'>Рассчитать стоимость</button>
         </div>
       </div>
       <div class="offer-blocks">
@@ -105,7 +105,7 @@
             разводка сантехнических труб<br>
             укладка плитки в санузлах <br>          
           </div>
-          <div class="offer-block__button button">Рассчитать стоимость</div>
+          <button class="offer-block__button button" data-popup='рассчитать стоимость'>Рассчитать стоимость</button>
       </div>
       </div>
       <div class="offer-blocks">
@@ -118,7 +118,7 @@
           <div class="offer-block__subtitle">капитальный ремонт, плюс: 
             двухуровневые потолки из гипсокартона или натяжные устройство потолков в санузлах укладка паркетной доски и тд устройство теплых полов 
             укладка плитки в санузлах</div>
-          <div class="offer-block__button button">Рассчитать стоимость</div>
+          <button class="offer-block__button button" data-popup='рассчитать стоимость'>Рассчитать стоимость</button>
         </div>
       </div>
     </div>
@@ -294,7 +294,7 @@
     <div class="gift-block">
       <h3 class="gift-block__title header-title">Получите в подарок дизайн-проект </h3>
       <div class="gift-block__subtitle header-description">Оставьте заявку, чтобы к вам мог выехать замерщик. Когда он закончит снимать мерки, он подарит вам сертификат на бесплатный дизайн-проект квартиры</div>
-      <button class="gift-block__button button">Получить подарок</button>
+      <button class="gift-block__button button" data-popup='получить подарок'>Получить подарок</button>
     </div>
     <div class="gift-image">
       <img src="img/free-image.jpg" alt="" class="gift-image__img">
@@ -435,7 +435,7 @@
       <div class="something-ask">
         <div class="something-ask__title header-title">Если остались вопросы</div>
         <div class="something-ask__subtitle header-description">Оставьте нам свои контакты, мы перезвоним и ответим. Обещаем не забрасывать вас рекламными рассылками и спамом, если вдруг вы закажите ремонт не у нас. Мы уважаем вас.</div>
-        <div class="something-ask__button button">Задать вопрос</div>
+        <button class="something-ask__button button" data-popup='задать вопрос'>Задать вопрос</button>
       </div>
     </div>
   </div>
@@ -446,7 +446,7 @@
     <div class="adress-contacts__location">Москва, Проспект Мира 64,<br> офис 205, 2 этаж налево</div>
     <div class="adress-contacts__time">Режим работы в будни<br> с 9.00 до 20.00</div>
     <div class="adress-contacts__telephone"><a href="tel:74993981882">8 499 398-18-82</a></div>
-    <button class="adress-contacts__button button">Заказать звонок</button>
+    <button class="adress-contacts__button button" data-popup='заказать звонок'>Заказать звонок</button>
   </div>
   <div class="adress-map">
     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2ccc9a59a523273b61271609252ca864726343f7d8a079a2e4af7ab9b7d26b3d&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=false"></script>
@@ -465,21 +465,29 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
 <div class="modal">
   <div class="modal-block">
-    <div class="modal-block__title">Оставьте свои данные, чтобы получить подарок</div>
-    <div class="modal-block__image">
-      
+    <div class="modal-close modal-close_close">×</div>
+    <div class="modal-block__title">Оставьте свои данные, чтобы <span class="modal-answer"></span> </div>
+    <div class="modal-block__image">      
     </div>
-    <form action="" class="modal-block__form">
-      <input type="text" class="modal-block__form-input" placeholder="Имя">
-      <input type="text" class="modal-block__form-input" placeholder="Телефон">
-      <button class="input modal-block__form-button button">Получить подарок</button></form>
+    <form action="#" id="modal-form" class="modal-block__form">
+      <input type="text" name="username" class="modal-block__form-input" placeholder="Имя">
+      <input type="tel" name="telephone" class="modal-block__form-input tel" placeholder="Телефон">
+      <button class="modal-block__form-button modal-answer" data-popup='подарок'>Получить подарок</button>
+    </form>
   </div>
 </div>
-
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/main.js"></script>
 <!-- Скрипт слайдера -->
 <script>
@@ -491,6 +499,27 @@ $(document).ready(function () {
     slidesToShow: 1,
     fade: true,
     fadeSpeed: 0
+  });
+  /* Маска для телефона */
+  $(".tel").mask("+7 (999) 999-99-99");
+  /* Валидация формы  */
+  $('#modal-form').validate({
+    rules: {
+      username: {
+        required: true,
+        minlength: 2
+      },
+      telephone: {
+        required: true,
+      }
+    },
+    messages: {
+      username: {
+        required: "Укажите имя",
+        minlength: jQuery.validator.format("Имя не должно быть короче, чем: {0} символа")
+      },
+      telephone: "Нам нужен ваш телефон"
+    }
   })
 });
 </script>
