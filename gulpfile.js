@@ -18,7 +18,7 @@ gulp.task('move-js', function(done) {
 }); 
 
 gulp.task('htmlmin', function(done) {
-  return gulp.src('./src/js/*.html')
+  return gulp.src('src/*.html')
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('dist/'));
   done();
