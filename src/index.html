@@ -18,10 +18,10 @@
       <div class="navbar-logo__title">Remont</div>
     </div>
     <div class="navbar-menu">
-        <a href="#" class="navbar-menu__item">Портфолио</a>        
-        <a href="#" class="navbar-menu__item">Цены</a>
-        <a href="#" class="navbar-menu__item">Отзывы</a>
-        <a href="#" class="navbar-menu__item">Контакты</a>
+        <a href="#portfolio" class="navbar-menu__item">Портфолио</a>        
+        <a href="#price" class="navbar-menu__item">Цены</a>
+        <a href="#reviews" class="navbar-menu__item">Отзывы</a>
+        <a href="#contacts" class="navbar-menu__item">Контакты</a>
     </div>
     <div class="navbar-contacts"><a href="tel:84993981882" class="navbar-contacts__tel">+7 499 398 18 82</a></div>
     </div>
@@ -69,7 +69,7 @@
 <section class="section offer">
   <div class="container">
     <div class="offer-feature">
-      <h3 class="offer-feature__title header-title">Услуги и цены</h3>
+      <h3 class="offer-feature__title header-title" id="price">Услуги и цены</h3>
       <p class="offer-feature__subtitle header-description">Чаще всего, чтобы рассчитать стоимость ремонта нужен точный замер помещения, но вы можете ориентироваться на цены, указанные на сайте</p>
     </div>
     <div class="offer-block">
@@ -127,7 +127,7 @@
 <section class="section projects projects_bg">
   <div class="container">
     <div class="projects-done">
-      <h3 class="projects-done__title header-title">Завершенные проекты</h3>
+      <h3 class="projects-done__title header-title" id="portfolio">Завершенные проекты</h3>
       <div class="projects-done__subtitle header-description">Мы сделали ремонт трехсот квартир, посмотрите часть из этих проектов. Тут лишь часть, потому что иногда клиенты не дают согласие на показ их квартир в нашем портфолио. </div>
     </div>
     <div class="slider">
@@ -305,7 +305,7 @@
 <section class="section projects projects_bg">
   <div class="container">
     <div class="projects-done">
-      <div class="projects-done__title header-title">Отзывы наших клиентов</div>
+      <div class="projects-done__title header-title" id="reviews">Отзывы наших клиентов</div>
       <div class="projects-done__subtitle header-description">Прочитайте, что пишут о нас те, кто уже заказал ремонт в нашей компании. Мы собираем отзывы не сразу после ремонта, а спустя месяц после заселения в квартиру, чтобы отзыв был честным.</div>
     </div>
     <div class="slider">
@@ -430,7 +430,7 @@
   <div class="container">
     <div class="something-block">
       <div class="something-image">
-        <img src="img/something-image.png" alt="Остались вопросы?">
+        <img src="img/something-image.png" id="contacts" alt="Остались вопросы?">
       </div>
       <div class="something-ask">
         <div class="something-ask__title header-title">Если остались вопросы</div>
@@ -465,6 +465,19 @@
     </div>
   </div>
 </section>
+<div class="modal">
+  <div class="modal-block">
+    <div class="modal-block__title">Оставьте свои данные, чтобы получить подарок</div>
+    <div class="modal-block__image">
+      
+    </div>
+    <form action="" class="modal-block__form">
+      <input type="text" class="modal-block__form-input" placeholder="Имя">
+      <input type="text" class="modal-block__form-input" placeholder="Телефон">
+      <button class="input modal-block__form-button button">Получить подарок</button></form>
+  </div>
+</div>
+
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/main.js"></script>

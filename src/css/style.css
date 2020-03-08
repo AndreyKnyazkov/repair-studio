@@ -644,6 +644,10 @@ button {
   outline: none;
 }
 
+input {
+  outline: none;
+}
+
 .slick-slide:focus {
   outline: none;
 }
@@ -917,6 +921,9 @@ button {
   }
   .offer-block__subtitle {
     font-size: 13px;
+  }
+  .offer-block__description {
+    padding: 30px 28px 38px 28px;
   }
 }
 
@@ -1584,6 +1591,107 @@ button {
   .footer__politics {
     margin-bottom: 45px;
     font-size: 14px;
+  }
+}
+
+.modal {
+  width: 550px;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 4px 44px rgba(184, 184, 184, 0.25);
+          box-shadow: 0px 4px 44px rgba(184, 184, 184, 0.25);
+}
+
+.modal-block {
+  padding: 25px 0px 60px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-block__image {
+  background: url(../img/modal.jpg) no-repeat;
+  height: 80px;
+  margin-top: 23px;
+}
+
+.modal-block__title {
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  font-size: 24px;
+  font-family: Playfair Display, sans-serif;
+  font-weight: 900;
+}
+
+.modal-block__form {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-block__form-input {
+  padding: 17px 23px;
+  margin-top: 10px;
+  border: 2px solid #FFCC69;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.modal-block__form-input::-webkit-input-placeholder {
+  font-size: 12px;
+  color: #72758E;
+}
+
+.modal-block__form-input:-ms-input-placeholder {
+  font-size: 12px;
+  color: #72758E;
+}
+
+.modal-block__form-input::-ms-input-placeholder {
+  font-size: 12px;
+  color: #72758E;
+}
+
+.modal-block__form-input::placeholder {
+  font-size: 12px;
+  color: #72758E;
+}
+
+.modal-block__form-button {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 80%;
+  }
+  .modal-block__title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-block__title {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .modal-block__form {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
