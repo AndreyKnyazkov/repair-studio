@@ -1299,11 +1299,11 @@ input {
 }
 
 .questions-answer.open .questions-answer__title::after {
-  content: url("../img/questions/arrow-bottom.svg");
+  content: url("../img/questions/arrow-top.svg");
 }
 
 .questions-answer.close .questions-answer__title::after {
-  content: url("../img/questions/arrow-top.svg");
+  content: url("../img/questions/arrow-bottom.svg");
 }
 
 .open .questions-answer__subtitle {
